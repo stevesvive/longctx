@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stevesvive-longctx"
+version = "0.1.0"
+description = "按语义边界切块并规划每块的注意力预算，标出跨块依赖"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "stevesvive" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://stevesvive.github.io"
+Repository = "https://github.com/stevesvive/longctx"
+Issues = "https://github.com/stevesvive/longctx/issues"
+
+[project.scripts]
+longctx = "longctx:main"
+
+[tool.setuptools]
+py-modules = ["longctx"]
